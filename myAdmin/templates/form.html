@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <form action="" method="post" style="margin-top: 150px" >
+                {% csrf_token %}
+                <div class="myStyle">
+                    {% for field in form %}
+                        <div style="position: relative">
+                            {{ field.label }}
+                            {{ field }}
+                            {% if field.is_pop %}
+                                <a onclick="pop_window('{{ field.pop_url }}');" style="position: absolute; right: -30px;top:30px"><span class="glyphicon glyphicon-plus"></span></a>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+                <input type="submit" class="btn btn-success pull-right" value="保存">
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    function pop_window(url) {
+        console.log(url);
+        window.open(url,"","width=600, height=500,top=100,left=100");
+    }
+</script>

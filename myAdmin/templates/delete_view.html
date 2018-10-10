@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h3 class="page-header">删除</h3>
+        <div class="col-md-6 col-md-offset-2">
+            <h3>确定删除当前的数据吗？</h3>
+            <br>
+            <p>删除对象：<a href="{{ edit_url }}">{{ model_obj }}</a></p>
+            <br>
+            <form action="" method="post">
+                {% csrf_token %}
+                <div>
+                 <input type="submit" class=" btn btn-danger" value="确定删除"/>
+                    <a class="btn btn-info" href="{{ list_url }}" style="margin-left:15px">返回</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

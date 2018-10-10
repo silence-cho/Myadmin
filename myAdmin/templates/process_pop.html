@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    window.opener.process_pop('{{ result.pk }}','{{ result.text }}','{{ result.pop_item_name }}');
+    window.close();
+</script>
+</body>
+</html>
