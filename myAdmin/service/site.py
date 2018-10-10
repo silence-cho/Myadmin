@@ -136,6 +136,7 @@ class Showlist(object):
         # print data_list
         return data_list
 
+#处理model表注册时的配置项
 class ModelAdmin(object):
     list_display = ('__str__',)
     list_display_links = ()
@@ -338,8 +339,7 @@ class ModelAdmin(object):
             return redirect(list_url)
         return render(request, 'delete_view.html', locals())
 
-
-
+#处理各app中model表的注册和url分发
 class AdminSite(object):
     def __init__(self):
         self._registry = {}
