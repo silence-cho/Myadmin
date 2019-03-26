@@ -56,8 +56,9 @@ A backend management system plug-in based on Django (可插拔式的后台管理
             site.register(models.Publish)
 5，实现效果实例：
 
+实现效果参见：https://www.cnblogs.com/silence-cho/p/9752045.html
 
-下面为一个完整的高级设置：
+下面为其完整的高级设置：
 
               #coding:utf-8
               # Register your models here.
@@ -69,7 +70,7 @@ A backend management system plug-in based on Django (可插拔式的后台管理
               from django.conf.urls import url
               class BookConfig(ModelAdmin):
                   '''
-                  可以人一定以函数来自定义表格的标题和内容，注意下面函数的格式，必须定义两个默认参数model_obj=None, isHeader=False，（查看函数和后端的处理逻辑）
+                  可以定以函数来自定义表格的标题和内容，注意下面函数的格式，必须定义两个默认参数model_obj=None, isHeader=False，（查看函数和后端的处理逻辑）
                   '''
                   # def edit(self, model_obj=None, isHeader=False):
                   #     if not self.model_config.list_display_links:
