@@ -56,6 +56,7 @@ A backend management system plug-in based on Django (可插拔式的后台管理
             site.register(models.Publish)
 5，实现效果实例：
 
+
 下面为一个完整的高级设置：
 
               #coding:utf-8
